@@ -1,0 +1,13 @@
+{
+  "name": "Chrome XFCE Remote Desktop",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "noVNC Remote Desktop",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/remote-desktop/install.sh",
+  "postStartCommand": "bash .devcontainer/remote-desktop/start.sh"
+}
